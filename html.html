@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 5 Most Beautiful Beaches in the World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    
+  <div class="hero">
+    <h1>5 najpiękniejszych plaż na świecie <br> na których poczujesz się jak w raju</h1>
+
+    <div class="author">
+      <img src="rodzynek.jpg" alt="Author profile" />
+      <div>
+        <strong>Jasiek, Mateusz</strong><br />
+        10 minut czytania
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+  <div class="section">
+    <div class="beach">
+      <h2>1. Whitehaven Beach, Australia</h2>
+      <p>Ta plaża z nieskazitelnym, białym piaskiem krzemionkowym i turkusową wodą to prawdziwy kawałek nieba w Whitsundays.</p>
+      <img src="plaza1.jpg" class="clickable">
+      <p class="toggle-description">Plaża ma około 7 kilometrów długości, co sprawia, że nawet w sezonie jest tu miejsce na spokojny wypoczynek bez tłumów.</p>
+      <img src="plaza1.2.jpg" class="toggle-description" width="110%">
+      <p class="toggle-description">Na północnym krańcu plaży znajduje się Hill Inlet, gdzie podczas przypływów i odpływów turkusowa woda miesza się z białym piaskiem, tworząc hipnotyzujące, wirujące wzory widoczne z góry.</p>
+      <img src="plaza1.3.jpg" class="toggle-description" width="110%">
+    </div>
+
+    <div class="beach">
+      <h2>2. Grace Bay, Turks and Caicos</h2>
+      <p>Krystalicznie czyste wody, piękne zachody słońca i drobny piasek sprawiają, że jest to ulubione miejsce miłośników plażowania.</p>
+      <img src="plaza2.webp" class="clickable">
+      <p class="toggle-description">Grace Bay słynie z niewiarygodnie przejrzystej, spokojnej wody, chronionej przez pobliską rafę koralową, co czyni ją idealną do pływania i snorkelingu.</p>
+      <img src="plaza2.2.jpg" class="toggle-description" width="110%">
+      <p class="toggle-description">To największa i najbardziej rozwinięta turystycznie wyspa w archipelagu Turks and Caicos.</p>
+      <img src="plaza2.3.avif" class="toggle-description" width="110%">
+    </div>
+
+    <div class="beach">
+      <h2>3. Anse Source d’Argent, Seychelles</h2>
+      <p>Granitowe głazy, rafy koralowe i różowy piasek – ta plaża jest tak fotogeniczna, jak to tylko możliwe.</p>
+      <img src="plaza3.jpg" class="clickable">
+      <p class="toggle-description">Plażę zdobią gigantyczne, gładkie granitowe skały, które są jednymi z najczęściej fotografowanych na świecie.</p>
+      <img src="plaza3.2.jpg" class="toggle-description" width="110%">
+      <p class="toggle-description">W zależności od światła, biały piasek z domieszką drobnych cząstek koralowca przybiera delikatny różowy odcień.</p>
+      <img src="plaza3.3.webp" class="toggle-description" width="110%">
+    </div>
+   
+    <div class="beach">
+      <h2>4. Navagio Beach, Greece</h2>
+      <p>Znana również jako Shipwreck Beach, ta kultowa zatoka otoczona jest klifami i można do niej dotrzeć tylko łodzią.</p>
+      <img src="plaza4.jpg" class="clickable">
+      <p class="toggle-description">Główną atrakcją plaży jest prawdziwy wrak przemytniczego statku, który osiadł tam w 1980 roku.</p>
+      <img src="plaza4.2.webp" class="toggle-description" width="110%">
+      <p class="toggle-description">Najsłynniejsze zdjęcia robione są z punktu widokowego nad klifem, ale uwaga: dostęp bywa niebezpieczny!</p>
+      <img src="plaza4.3.jpg" class="toggle-description" width="110%">
+    </div>
+
+    <div class="beach">
+      <h2>5. Baía do Sancho, Brazil</h2>
+      <p>Plaża ta jest regularnie uznawana za jedną z najlepszych na świecie. Znajdziemy tu bujną przyrodę i wspaniałe miejsca do nurkowania.</p>
+      <img src="plaza5.jpg" class="clickable">
+      <p class="toggle-description">Plaża znajduje się na wyspie Fernando de Noronha, wpisanej na listę UNESCO. Do plaży schodzi się po stromych metalowych schodach wśród klifów.</p>
+      <img src="plaza5.2.jpg" class="toggle-description" width="110%">
+      <p class="toggle-description">Zero barów, hoteli czy sklepów – przyroda w czystej postaci, plaża dla prawdziwych poszukiwaczy raju.</p>
+      <img src="plaza5.3.jpg" class="toggle-description" width="110%">
+    </div>
+  </div>
+  </div>
+</body>
+<script>
+  document.querySelectorAll('.beach').forEach(beach => {
+  const clickableImg = beach.querySelector('img.clickable');
+  const toggleElems = beach.querySelectorAll('.toggle-description');
+
+  if (toggleElems.length === 0) return;
+
+  toggleElems.forEach(el => el.classList.remove('active'));
+
+  clickableImg.addEventListener('click', () => {
+    const isActive = toggleElems[0].classList.contains('active');
+
+    toggleElems.forEach(el => {
+      el.classList.toggle('active', !isActive);
+    });
+  });
+});
+
+</script>
+</html>
